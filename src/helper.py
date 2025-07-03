@@ -18,7 +18,7 @@ print("🔑 Loaded API Key")
 
 llm = ChatOpenAI(
     base_url="https://openrouter.ai/api/v1",                           # Replace with Base URL of the Provider
-    api_key=API_KEY,
+    api_key=OPENROUTER_API_KEY,
     model="mistralai/mistral-small-3.2-24b-instruct"                   #Select Model with better accuracy 
 )
 
