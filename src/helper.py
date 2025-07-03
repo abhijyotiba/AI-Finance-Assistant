@@ -12,14 +12,14 @@ from src.prompt import SYSTEM_PROMPT  # Import the prompt
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 if OPENROUTER_API_KEY is None:
-    raise ValueError("❌ OPENROUTER_API_KEY is not set in the environment!")
+    raise ValueError("❌ API_KEY is not set in the environment!")
 
 print("🔑 Loaded API Key")
 
 llm = ChatOpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=OPENROUTER_API_KEY,
-    model="mistralai/mistral-small-3.2-24b-instruct"
+    base_url="https://openrouter.ai/api/v1",                           # Replace with Base URL of the Provider
+    api_key=API_KEY,
+    model="mistralai/mistral-small-3.2-24b-instruct"                   #Select Model with better accuracy 
 )
 
 
